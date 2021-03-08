@@ -1,5 +1,5 @@
 <?php  
 
-    header("location:userform/userform.php");
+    header("location:userform.php");
 
 ?>
