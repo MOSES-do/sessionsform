@@ -1,10 +1,12 @@
 <?php  
 
 session_start();
-//if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
-
-    header("location: home.php");
-//}
+if(!$_SESSION['username']) && (!$_SESSION['pass'])){
+   
+    //
+} else {
+header("location: home.php");
+}
 
 ?>
 <!DOCTYPE html>
