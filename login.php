@@ -52,17 +52,16 @@ $_SESSION['pass'] = $pass;
 
 if(empty($username && $pass)){
     $error = "All field is required";
-} 
- elseif(!isset($_SESSION['username '])) {
-        $error_mssg = "Session not found";
-} else {
+ 
+} elseif(
 $passw = $_SESSION['password'];
-$pass_decode = password_verify($pass, $passw);
-
+$pass_decode = password_verify($pass, $passw)){
 
 if(($_SESSION['user'] == $_SESSION['username'] && $pass_decode ==  $_SESSION['pass'])){
 
     header("location: home.php");
+}elseif(!$_SESSION['username '])) {
+        $error_mssg = "Session not found";
 
   }else{
     $error_msg = "Incorrect credentials";
