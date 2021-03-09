@@ -1,11 +1,9 @@
 <?php  
 
 session_start();
-if(!$_SESSION['username']) && (!$_SESSION['pass'])){
-   
-    //
-} else {
-header("location: home.php");
+if(isset($_SESSION['username']) && !empty($_SESSION['username'])){
+
+    header("location: home.php");
 }
 
 ?>
@@ -55,7 +53,7 @@ $_SESSION['pass'] = $pass;
 if(empty($username && $pass)){
     $error = "All field is required";
 } 
- elseif(!isset($_SESSION['user'])) {
+ elseif(!isset($_SESSION['username '])) {
         $error_mssg = "Session not found";
 } else {
 $passw = $_SESSION['password'];
